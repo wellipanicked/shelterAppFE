@@ -1,0 +1,49 @@
+<div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2 side-menu">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="pracownicy" data-toggle="pill" routerLink="/pracownicy-lista" role="tab">Pracownicy</a>
+          <a class="nav-link" id="wolontariusze" data-toggle="pill" routerLink="/wolontariusze-lista" role="tab">Wolontariusze</a>
+        </div>
+      </div>
+      <div class="col-sm-10 content-table">
+        <h3 class="table-header">Lista pracowników</h3>
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th scope="col">Imię</th>
+            <th scope="col">Nazwisko</th>
+            <th scope="col">Stanowisko</th>
+            <th scope="col">PESEL</th>
+            <th scope="col">NIP</th>
+            <th scope="col">Data zatrudnienia</th>
+            <th scope="col">Status</th>
+            <th scope="col">Akcje</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let pracownik of Pracownik">
+            <td>{{pracownik.danePodstawowe.imie}}</td>
+            <td>{{pracownik.danePodstawowe.nazwisko}}</td>
+            <td>{{pracownik.danePodstawowe.stanowisko}}</td>
+            <td>{{pracownik.danePodstawowe.pesel}}</td>
+            <td>{{pracownik.danePodstawowe.nip}}</td>
+            <td>{{pracownik.daneZatrudnienia.dataZatrudnienia}}</td>
+            <td>{{pracownik.daneZatrudnienia.aktywny}}</td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-success" routerLink="/pracownik-edycja/{{pracownik.id}}">Edytuj</button>
+                <button type="button" class="btn btn-danger" (click)="deletePracownik(pracownik.id)">Usuń</button>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <button type="button" class="btn btn-primary" routerLink="/pracownik-utworz">Dodaj</button>
+      </div>
+    </div>
+  </div>
+
+</div>

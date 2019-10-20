@@ -1,0 +1,167 @@
+<div class="tabs">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/pracownik-edycja/{{pracownik.id}}">Dane</a>
+    </li>
+    <li>
+      <a class="nav-link" routerLink="/pracownik-dokumenty">Dokumenty</a>
+    </li>
+    <li>
+      <a class="nav-link " routerLink="/pracownik-historia">Historia</a>
+    </li>
+  </ul>
+</div>
+<div class="basic-form">
+  <h3>Dane główne</h3>
+
+  <div class="row row-form">
+    <div class="col">
+      <label for="imie">Imię:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.danePodstawowe.imie" class="form-control" id="imie">
+    </div>
+    <div class="col">
+      <label for="nazwisko">Nazwisko:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.danePodstawowe.nazwisko" class="form-control" id="nazwisko">
+    </div>
+  </div>
+
+  <div class="row row-form">
+    <div class="col">
+      <label for="stanowisko">Stanowisko:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.danePodstawowe.stanowisko" class="form-control" id="stanowisko">
+    </div>
+    <div class="col">
+      <label for="pesel">PESEL:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.danePodstawowe.pesel" class="form-control" id="pesel">
+    </div>
+  </div>
+
+  <div class="row row-form">
+    <div class="col">
+      <label for="nip">NIP:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.danePodstawowe.nip" class="form-control" id="nip">
+    </div>
+    <div class="col">
+      <label for="dataUrodzenia">Data urodzenia:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.danePodstawowe.dataUrodzenia" class="form-control" id="dataUrodzenia">
+    </div>
+  </div>
+
+  <h3>Dane adresowe</h3>
+
+  <div class="row row-form">
+    <div class="col">
+      <label for="kraj">Kraj:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.daneAdresowe.kraj" class="form-control" id="kraj">
+    </div>
+    <div class="col">
+      <label for="ulica">Ulica:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.daneAdresowe.ulica" class="form-control" id="ulica">
+    </div>
+  </div>
+
+  <div class="row row-form">
+    <div class="col">
+      <label for="wojewodztwo">Województwo:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.daneAdresowe.wojewodztwo" class="form-control" id="wojewodztwo">
+    </div>
+    <div class="col">
+      <label for="nrbudynku">Numer budynku:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.daneAdresowe.nr_budynku" class="form-control" id="nrbudynku">
+    </div>
+  </div>
+
+  <div class="row row-form">
+    <div class="col">
+      <label for="powiat">Powiat:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.daneAdresowe.powiat" class="form-control" id="powiat">
+    </div>
+    <div class="col">
+      <label for="nrmieszkania">Numer mieszkania:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.daneAdresowe.nr_mieszkania" class="form-control" id="nrmieszkania">
+    </div>
+  </div>
+
+  <div class="row row-form">
+    <div class="col">
+      <label for="poczta">Poczta:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.daneAdresowe.poczta" class="form-control" id="poczta">
+    </div>
+    <div class="col">
+      <label for="kod">Kod pocztowy:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.daneAdresowe.kod_pocztowy" class="form-control" id="kod">
+    </div>
+  </div>
+
+  <div class="row row-form">
+    <div class="col">
+      <label for="miasto">Miasto:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.daneAdresowe.miasto" class="form-control" id="miasto">
+    </div>
+  </div>
+
+  <h3>Dane zatrudnienia</h3>
+
+  <div class="row row-form">
+    <div class="col">
+      <label for="dataZatrudnienia">Data zatrudnienia:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.daneZatrudnienia.dataZatrudnienia" class="form-control" id="dataZatrudnienia">
+    </div>
+    <div class="col">
+      <label for="dataOdejscia">Data odejścia:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.daneZatrudnienia.dataOdejscia" class="form-control" id="dataOdejscia">
+    </div>
+  </div>
+
+  <div class="row row-form">
+    <div class="col">
+      <label for="umowaDo">Umowa ważna do:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.daneZatrudnienia.umowaWaznaDo" class="form-control" id="umowaDo">
+    </div>
+    <div class="col">
+      <label for="aktywny">Aktywny:</label>
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="pracownik.daneZatrudnienia.aktywny" class="form-control" id="aktywny">
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-success" (click)="updatePracownik()">Zapisz</button>
+  <button type="button" class="btn btn-danger" routerLink="/pracownicy-lista">Wyjdź</button>
+</div>
